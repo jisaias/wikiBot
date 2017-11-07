@@ -1,16 +1,19 @@
 import wikipedia
 
-subjectKey = raw_input("What subject would you like to find more about? ")
+def getPage(question):
 
-summaryParagraph = wikipedia.summary(subjectKey)
+    subjectKey = question
+    
+    subjectKey = subjectKey.replace(' ','_')
+    
+    wikiURL = 'https://en.wikipedia.org/wiki/' + subjectKey
+    
+    return wikiURL
+    
 
-subjectKey = subjectKey.replace(' ','_')
-
-wikiURL = 'https://en.wikipedia.org/wiki/' + subjectKey
-
-print(summaryParagraph)
-
-print(wikiURL)
-
-
-
+def getPara(question):
+    subj = question
+    
+    para = wikipedia.summary(subj)
+    
+    return para
