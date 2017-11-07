@@ -1,5 +1,6 @@
 import wikipedia
 
+#returns link to Wikipedia article
 def getPage(question):
 
     subjectKey = question
@@ -10,7 +11,7 @@ def getPage(question):
     
     return wikiURL
     
-
+#returns summary paragraph
 def getPara(question):
     subj = question
     
